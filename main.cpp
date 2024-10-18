@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 // Print "Hello World"
@@ -137,15 +140,83 @@ int main() {
 
 // Comments
 // comments don't get compiled
+/*
+    block of comment
+*/
+/*
 int main() {
     // ...
     // ...
-    /*
-    block of comment
-    */
     int x = 0; // ...
     return 0;
 }
+*/
 
+// Initializing variables
+/*
+int main() {
+    double price = 99.99;
+    float interestRate = 3.67F;
+    long fileSize = 90000L;
+    char letter = 'a';
+    bool isValid = false;
+    auto isValid2 = false;
+    return 0;
+}
+*/
 
+// Numbers
+/*
+int main() {
+    int number = {};
+    cout << number;
+    return 0;
+}
+*/
 
+// Working with Numbers
+/*
+int main() {
+    int number = 255;
+    int number = 0b11111111;
+    int number = 0xFF;
+    unsigned int number = -255;
+    cout << number;
+    return 0;
+}
+*/
+
+// Narrowing
+/*
+int main() {
+    short number = 1'000'000;
+    int another = number;
+    cout << another;
+    return 0;
+}
+*/
+
+// Generating Random Numbers
+// random not really random. we can adjust it based on null pointer time
+/*
+int main() {
+    long elapsedSeconds = time(nullptr); // Jan 1 1970
+    srand(elapsedSeconds);
+    // or use srand(time(0));
+    int number = rand() % 10; // 0-9
+    cout << number;
+    return 0;
+}
+*/
+
+// Exercise: Roll dice
+int main() {
+    const short minValue = 1;
+    const short maxValue = 6;
+    srand(time(0));
+    short first = (rand() % (maxValue - minValue + 1)) + minValue;
+    short second = (rand() % (maxValue - minValue + 1)) + minValue;
+
+    cout << first << ", " << second;
+    return 0;
+}
